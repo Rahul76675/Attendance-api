@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Operations</p>
+          <h1>Attendance Dashboard</h1>
+        </div>
+        <button id="refreshBtn" class="primary-btn">Refresh</button>
+      </header>
+
+      <section class="summary-grid">
+        <article class="summary-card">
+          <span class="label">API status</span>
+          <strong id="apiStatus">Checking...</strong>
+        </article>
+        <article class="summary-card">
+          <span class="label">Employees</span>
+          <strong id="employeeCount">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="label">Last updated</span>
+          <strong id="lastUpdated">--</strong>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Employees</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Emp Code</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Shift</th>
+                <th>Joined</th>
+              </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+              <tr>
+                <td colspan="5" class="empty">Loading employees...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
